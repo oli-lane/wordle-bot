@@ -1,14 +1,19 @@
 def main():
-    print("Hello World!")
+    solve()
 
 def solve():
+    num_guesses = 0
     valid_words = ALL_WORDS
     while True:
             guess = make_guess(valid_words)
+            num_guesses += 1
             print("Guess: " + guess.upper())
             result = collect_result()
+            if num_guesses > 6:
+                print("fail")
+                break
             if result == CORRECT:
-                print("I won!")
+                print("success")
                 break
             valid_words = update_valid_words(valid_words, guess, result)
 
