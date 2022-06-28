@@ -1,7 +1,7 @@
 from collections import Counter
 
 
-def guess(valid_words):
+def guess_word(valid_words):
     count = Counter()
     for cur in valid_words:
         count.update(cur)
