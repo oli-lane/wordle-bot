@@ -1,4 +1,4 @@
-
+from evaluate import *
 
 def update(valid_words, guess):
     """
