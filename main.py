@@ -14,7 +14,7 @@ def solve():
     cur_guess = guess.guess_word_1(valid_words)
     num_guesses += 1
     print("Guess: " + cur_guess.upper())
-    result = evaluate_word()
+    result = evaluate_word()  # 5 element array of nums 0, 1, or 2
     if num_guesses > 6:
       print("fail")
       break
