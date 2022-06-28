@@ -3,7 +3,8 @@ def main():
 
 def solve():
     num_guesses = 0
-    valid_words = ALL_WORDS
+    with open('all_words.txt') as ifp:
+        valid_words = list(map(lambda x: x.strip(), ifp.readlines()))
     while True:
             guess = make_guess(valid_words)
             num_guesses += 1
