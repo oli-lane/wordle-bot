@@ -11,7 +11,7 @@ def solve():
   with open('all_words.txt') as ifp:
     valid_words = list(map(lambda x: x.strip(), ifp.readlines()))
   while True:
-    cur_guess = guess.guess_word_1(valid_words)
+    cur_guess = guess.guess_word_2(valid_words)
     num_guesses += 1
     print("Guess: " + cur_guess.upper())
     result = evaluate_word()
