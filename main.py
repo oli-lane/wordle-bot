@@ -1,12 +1,15 @@
 import guess
 from evaluate import evaluate_word
+from update import update_words
 
 
 def main():
-  solve()
+  print("Wordle Bot\n")
+  word = input("Enter a word: ")
+  solve(word)
 
 
-def solve():
+def solve(word):
   num_guesses = 0
   with open('all_words.txt') as ifp:
     valid_words = list(map(lambda x: x.strip(), ifp.readlines()))
@@ -19,9 +22,9 @@ def solve():
       print("fail")
     # if result is correct
     if result == [2, 2, 2, 2, 2]:
-      print("success")
+      print("Your word took " + str(num_guesses) + " to solve!\n")
       break
-    valid_words = update_valid_words(valid_words, guess, result)
+    valid_words = update_words(valid_words, guess, result)
 
 
 if __name__ == "__main__":
