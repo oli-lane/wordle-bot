@@ -2,8 +2,10 @@ Setup testing
 Make files and branches for each method
 Get all the applicable words
 
-1 of us does update()
-1 of us does interface
+Nick does update()
+Oli does interface
 - interface consists of:
   - word to guess OR
   - file of words to guess
+
+We each work on guess
