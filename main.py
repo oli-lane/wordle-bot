@@ -2,11 +2,11 @@ import guess
 from evaluate import evaluate_word
 
 
-def main(infile=None):
-  solve(infile)
+def main():
+  solve()
 
 
-def solve(infile):
+def solve():
   num_guesses = 0
   with open('all_words.txt') as ifp:
     valid_words = list(map(lambda x: x.strip(), ifp.readlines()))
