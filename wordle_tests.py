@@ -14,3 +14,4 @@ class TestBot(unittest.TestCase):
       total_guesses += guesses
     avg = total_guesses / num_words
     print("The average number of guesses was " + str(avg) + "!\n")
+    self.assertLess(avg, 6)
