@@ -7,7 +7,7 @@ def main():
   print("Wordle Bot\n")
   word = input("Enter a word: ")
   num = solve(word, "yes")
-  print("Your word took " + str(num) + " guesses to solve!\n")
+  print("The Wordle bot solved " + word + " in " + str(num) + " guesses!")
 
 
 def solve(word, verbosity) -> int:
@@ -19,9 +19,7 @@ def solve(word, verbosity) -> int:
     num_guesses += 1
     if verbosity == "yes":
       print("Guess " + str(num_guesses) + " : " + cur_guess.upper())
-    result = evaluate_word()  # 5 element array of nums 0, 1, or 2
-    if num_guesses > 6:
-      print("fail")
+    result = evaluate_word(cur_guess, word)  # 5 element array of nums 0, 1, or 2
     # if result is correct
     if result == [2, 2, 2, 2, 2]:
       return num_guesses
