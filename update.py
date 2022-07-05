@@ -1,6 +1,6 @@
 from evaluate import *
 
-def update(valid_words, guess):
+def update_words(valid_words, guess, result):
     """
     
     :param valid_words: List? or .txt file? of valid words
