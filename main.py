@@ -23,7 +23,7 @@ def solve(word, verbosity) -> int:
         # if result is correct
         if result == [2, 2, 2, 2, 2]:
             return num_guesses
-        valid_words = update_words(valid_words, guess, result)
+        valid_words = update_words(valid_words, cur_guess, result)
 
 
 if __name__ == "__main__":

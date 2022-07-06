@@ -1,6 +1,6 @@
 
 
-def evaluate_word(guess, answer):
+def evaluate_word(guess: str, answer: str):
     """
     5 element array of elements: 0, 1, or 2
     0 if character is not in answer
